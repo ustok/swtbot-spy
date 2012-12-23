@@ -14,4 +14,29 @@
 		<module>../org.ustok.swtbot.spy.repo</module>
 	</modules>
 	
+	<properties>
+  		<tycho-version>0.16.0</tycho-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<repositories>
+    	<repository>
+	      	<id>juno</id>
+	      	<layout>p2</layout>
+	      	<url>http://download.eclipse.org/releases/juno</url>
+    	</repository>
+ 	</repositories>
+
+  	<build>
+    	<plugins>
+      		<plugin>
+        		<groupId>org.eclipse.tycho</groupId>
+        		<artifactId>tycho-maven-plugin</artifactId>
+        		<version>${tycho-version}</version>
+        		<extensions>true</extensions>
+      		</plugin>
+    	</plugins>
+  	</build>
+	
+	
 </project>

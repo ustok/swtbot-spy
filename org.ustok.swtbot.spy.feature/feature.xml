@@ -26,13 +26,13 @@ All rights reserved.
          id="org.ustok.swtbot.spy"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
          
    <plugin
          id="org.ustok.swtbot.spy.source"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
-         
+         version="1.0.0.qualifier"
+         unpack="false"/>
 
 </feature>
