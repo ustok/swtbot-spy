@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.ustok.swtbot.spy.feature"
+      label="SWT Bot Spy Feature"
+      version="1.0.0.qualifier"
+      provider-name="Ustok.org">
+
+   <description url="http://www.ustok.org/cms/index.php/swtbot-spy">
+      SWTBot Spy is a simple Eclipse plug-in to conveniently show the SWTBot widget keys directly on your widgets in the running UI.
+   </description>
+
+   <copyright>
+      Copyright 2012 by Ustok.org.
+All rights reserved.
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      Eclipse Public License - v 1.0
+   </license>
+
+   <url>
+      <discovery label="Ustok.org home" url="http://www.ustok.org"/>
+   </url>
+
+   <plugin
+         id="org.ustok.swtbot.spy"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+         
+   <plugin
+         id="org.ustok.swtbot.spy.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+         
+
+</feature>

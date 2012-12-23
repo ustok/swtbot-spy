@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.ustok.swtbot.spy.feature_1.0.0.qualifier.jar" id="org.ustok.swtbot.spy.feature" version="1.0.0.qualifier">
+      <category name="Ustok Dev"/>
+   </feature>
+   <category-def name="Ustok Dev" label="Ustok Dev">
+      <description>
+         Ustok development center.
+      </description>
+   </category-def>
+</site>

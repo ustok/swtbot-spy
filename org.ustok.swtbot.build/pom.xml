@@ -2,9 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ustok</groupId>
-	<artifactId>org.ustok.swtbot.spy</artifactId>
+	<artifactId>org.ustok.swtbot.spy.build</artifactId>
+	<name>SWT Bot Spy Build</name>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>SWT Bot Spy</name>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>pom</packaging>
 
+	<modules>
+		<module>../org.ustok.swtbot.spy</module>
+		<module>../org.ustok.swtbot.spy.test</module>
+		<module>../org.ustok.swtbot.spy.feature</module>
+		<module>../org.ustok.swtbot.spy.repo</module>
+	</modules>
+	
 </project>
