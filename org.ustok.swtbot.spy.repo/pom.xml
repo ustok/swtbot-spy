@@ -4,7 +4,7 @@
 	<groupId>org.ustok</groupId>
 	<artifactId>org.ustok.swtbot.spy.repo</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>SWTBot Spy Development Repo</name>
+	<name>SWTBot Spy Repo</name>
 	<packaging>eclipse-repository</packaging>
 	
 	<properties>
@@ -17,6 +17,11 @@
 	      	<id>juno</id>
 	      	<layout>p2</layout>
 	      	<url>http://download.eclipse.org/releases/juno</url>
+    	</repository>
+    	<repository>
+	      	<id>ustok swtbot-spy</id>
+	      	<layout>p2</layout>
+	      	<url>http://www.ustok.org/downloads/releases/repos/swtbot_spy</url>
     	</repository>
  	</repositories>
 
