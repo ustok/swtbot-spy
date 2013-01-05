@@ -8,7 +8,7 @@ package org.ustok.swtbot.internal.spy;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Listener;
-import org.ustok.swtbot.internal.spy.listener.SwtBotSpyKeyDownListener;
+import org.ustok.swtbot.internal.spy.listener.SwtBotSpyKeyListener;
 import org.ustok.swtbot.internal.spy.listener.SwtBotSpyMouseListener;
 
 /**
@@ -35,8 +35,8 @@ public class SwtBotSpy {
 		ILabelManager labelManager = new LabelManager();
 		labelManager.addMouseListener(new SwtBotSpyMouseListener());
 
-		Listener listenerKeyDown = new SwtBotSpyKeyDownListener(labelManager);
-		Display.getDefault().addFilter(SWT.KeyDown, listenerKeyDown);
+		Listener keyListener = new SwtBotSpyKeyListener(labelManager);
+		Display.getDefault().addFilter(SWT.KeyDown, keyListener);
 	}
 
 }

@@ -14,12 +14,12 @@ import org.eclipse.swt.widgets.Shell;
 import org.ustok.swtbot.internal.spy.ILabelManager;
 
 /**
- * Key listener to process key-down events.
+ * Key listener to process key events.
  * 
  * @author Ingo Mohr
  * @created Dec 23, 2012
  */
-public class SwtBotSpyKeyDownListener implements Listener {
+public class SwtBotSpyKeyListener implements Listener {
 
 	/** label manager */
 	private final ILabelManager fLabelManager;
@@ -30,7 +30,7 @@ public class SwtBotSpyKeyDownListener implements Listener {
 	 * @param pLabelManager
 	 *        the label manager to use. Cannot be <code>null</code>.
 	 */
-	public SwtBotSpyKeyDownListener(ILabelManager pLabelManager) {
+	public SwtBotSpyKeyListener(ILabelManager pLabelManager) {
 		Assert.isNotNull(pLabelManager);
 		fLabelManager = pLabelManager;
 	}
