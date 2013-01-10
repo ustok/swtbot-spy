@@ -25,7 +25,7 @@ import org.eclipse.swt.widgets.Label;
 public class LabelManager implements ILabelManager {
 
 	/** mouse listeners */
-	private final List<MouseListener> fListMouseListeners = new ArrayList<>();
+	private final List<MouseListener> fListMouseListeners = new ArrayList<MouseListener>();
 
 	/** currently added labels */
 	private final List<Label> fListLabels = new ArrayList<Label>();

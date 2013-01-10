@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SWT Bot Spy Test
 Bundle-SymbolicName: org.ustok.swtbot.spy.test;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-Vendor: Ustok.org
-Fragment-Host: org.ustok.swtbot.spy;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Fragment-Host: org.ustok.swtbot.spy;bundle-version="1.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.junit;bundle-version="4.10.0"
