@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.ustok.swtbot.spy.feature"
-      label="SWT Bot Spy Feature"
+      label="SWT Bot Spy"
       version="1.1.0.qualifier"
       provider-name="Ustok.org">
 
