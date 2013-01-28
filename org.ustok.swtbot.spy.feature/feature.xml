@@ -2,7 +2,7 @@
 <feature
       id="org.ustok.swtbot.spy.feature"
       label="SWT Bot Spy"
-      version="1.1.0.qualifier"
+      version="1.1.1.qualifier"
       provider-name="Ustok.org">
 
    <description url="http://www.ustok.org/cms/index.php/swtbot-spy">
@@ -26,13 +26,13 @@ All rights reserved.
          id="org.ustok.swtbot.spy"
          download-size="0"
          install-size="0"
-         version="1.1.0"/>
+         version="1.1.1"/>
 
    <plugin
          id="org.ustok.swtbot.spy.source"
          download-size="0"
          install-size="0"
-         version="1.1.0"
+         version="1.1.1"
          unpack="false"/>
 
 </feature>

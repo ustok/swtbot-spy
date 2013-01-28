@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SWT Bot Spy
 Bundle-SymbolicName: org.ustok.swtbot.spy;singleton:=true
-Bundle-Version: 1.1.0.qualifier
+Bundle-Version: 1.1.1.qualifier
 Bundle-Vendor: Ustok.org
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime

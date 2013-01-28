@@ -15,6 +15,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
 
 /**
  * Implementation for {@link ILabelManager}.
@@ -48,10 +50,16 @@ public class LabelManager implements ILabelManager {
 	public void activateLabels(Composite pComposite) {
 		synchronized (this) {
 			for (Control child : pComposite.getChildren()) {
+				internalActivateLabel(child);
+
+				if (child instanceof ToolBar) {
+					for (ToolItem item : ((ToolBar) child).getItems()) {
+						internalActivateLabel(item);
+					}
+				}
+
 				if (child instanceof Composite) {
 					activateLabels((Composite) child);
-				} else {
-					internalActivateLabel(child);
 				}
 			}
 		}
@@ -87,6 +95,31 @@ public class LabelManager implements ILabelManager {
 			label.setText(text);
 			label.setToolTipText("ID: <" + text + ">. Doubleclick to copy.");
 			label.moveAbove(pControl);
+			label.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_INFO_BACKGROUND));
+			label.setForeground(Display.getDefault().getSystemColor(SWT.COLOR_INFO_FOREGROUND));
+			for (MouseListener listener : getMouseListeners()) {
+				label.addMouseListener(listener);
+			}
+
+			fListLabels.add(label);
+		}
+	}
+
+	private void internalActivateLabel(ToolItem pToolItem) {
+		// duplicate code is rubbish, but it's ok for now. The complete Spy UI will be redesigned.
+		
+		Object rawData = pToolItem.getData(SwtBotSpyPlatformConstants.WIDGET_ID_KEY);
+		if (rawData instanceof String) {
+			Composite parent = pToolItem.getParent();
+			String text = (String) rawData;
+			final int height = 20;
+			Rectangle bounds = pToolItem.getBounds();
+			int locationY = Math.max(0, bounds.height / 2 - height / 2) + bounds.y;
+			Label label = new Label(parent, SWT.BORDER);
+			label.setBounds(bounds.x, locationY, bounds.width, height);
+			label.setText(text);
+			label.setToolTipText("ID: <" + text + ">. Doubleclick to copy.");
+			label.moveAbove(pToolItem.getParent());
 			label.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_INFO_BACKGROUND));
 			label.setForeground(Display.getDefault().getSystemColor(SWT.COLOR_INFO_FOREGROUND));
 			for (MouseListener listener : getMouseListeners()) {

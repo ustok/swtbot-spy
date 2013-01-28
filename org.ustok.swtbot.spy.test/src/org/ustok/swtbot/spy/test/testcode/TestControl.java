@@ -9,9 +9,13 @@ import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.swt.widgets.Widget;
 
 /**
  * SWTBot Spy test control.
@@ -39,9 +43,21 @@ public class TestControl extends Composite {
 
 		Label labelNoId = new Label(this, SWT.NONE);
 		labelNoId.setText("<no id>");
+
+		DateTime dateTime = new DateTime(this, SWT.NONE);
+		dateTime.setLayoutData(GridDataFactory.swtDefaults().create());
+		installSWTBotId(dateTime, "datetime_id");
+
+		ToolBar toolbar = new ToolBar(this, SWT.HORIZONTAL);
+		ToolItem toolItem = new ToolItem(toolbar, SWT.PUSH);
+		toolItem.setText("Click!");
+		installSWTBotId(toolItem, "toolitem_id");
+
+		Spinner spinner = new Spinner(this, SWT.HORIZONTAL);
+		installSWTBotId(spinner, "spinner_id");
 	}
 
-	private void installSWTBotId(Control pControl, String pKey) {
-		pControl.setData("org.eclipse.swtbot.widget.key", pKey);
+	private void installSWTBotId(Widget pWidget, String pKey) {
+		pWidget.setData("org.eclipse.swtbot.widget.key", pKey);
 	}
 }
